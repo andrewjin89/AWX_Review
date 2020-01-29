@@ -1,7 +1,9 @@
-# 목차
+# 목차 #
 - [사전 설치 패키지](#1)
 - [AWX 설치](#2)
 - [AWX 설치 중 발생 오류 들](#3)
+
+> GitHub에서 제공 중인 설치 메뉴얼의 내용 중 Docker를 이용한 설치 부분에 대한 내용을 정리한것이다.
 
 > CentOS 7 Minimal 64bit에서 설치하는 것으로 가정하며, AWX는 Ansible playbook을 이용해서 Docker-compose file을 생성해서 Docker Container로 구동이 된다.
 
@@ -11,9 +13,9 @@
 
 <a name="1"></a>
 
-## 사전 설치 패키지
+## 사전 설치 패키지 ##
 
-### 설치
+### 설치 ###
 1. `yum install epel-release`
 2. `yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
 3. `yum install docker-ce docker-ce-cli containerd.io`
@@ -28,7 +30,7 @@
 12. `pip install docker>=4.1.0`
 13. `pip install docker-compose>=1.25.3`
 
-### 각 패키지 버전
+### 각 패키지 버전 ###
 - git : Requires Version 1.8.4+
 - ansible : Requires Version 2.8+
 - docker : A recent version
@@ -39,7 +41,7 @@
 
 <a name="2"></a>
 
-## AWX 설치
+## AWX 설치 ##
 1. `git clone https://github.com/ansible/awx.git`
 2. `cd awx/installer/`
    1. inventory 설정 중 버전 설정이 필요한 경우
@@ -66,7 +68,7 @@
 
 <a name="3"></a>
 
-## AWX 설치 중 발생하는 오류
+## AWX 설치 중 발생하는 오류 ##
 
 1. Ansible Version이 2.8 이하 인 경우 아래 이미지와 같은 에러가 발생한다.![](images/2020-01-28-15-29-12.png)
    - 해결방법 Ansible의 버전을 2.8 이상으로 업그레이드 한다.
