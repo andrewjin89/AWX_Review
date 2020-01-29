@@ -1,8 +1,9 @@
 # 목차
 - [Ansible 이란](#1)
-- [Ansible 기본 개념](#2)
-- [AWX 란](#3)
-- [AWX 구성](#4)
+- [Ansible을 사용해야되는 이유](#2)
+- [Ansible의 목표](#3)
+- [Ansible의 특징](#4)
+- [Ansible 기본 개념](#5)
 
 ---
 
@@ -13,6 +14,8 @@
 - 현재 가장 많이 사용되는 배포/서버 자동화 도구 이다.
 - Ansible의 경우 Agent없이 SSH를 이용해서 클라이언트에 접속 및 운영을 할 수 있다.
 
+<a name="2"></a>
+
 ## Ansible을 사용해야되는 이유 ##
 1. IT관리자가 관리해야 하는 역활의 증가
 2. IT관리자가 하나의 서버에 배포환경 구축하고 SW설치하고 운영 및 업데이트까지 공통적인 일들을 반복적으로 수행하기에 시간적으로 비효율적다.
@@ -22,6 +25,8 @@
 > Ansible은 SF 소설에서 등장하는 공간적 거리에 관계없이 동시에 통신이 가능하도록 하는 기구, 즉 초광속 통신 장치가 본래의 의미입니다.
 
 > 2012년 2월 20일 처음 공개되어 2015년 10월 Red Hat에 의해 인수되었습니다. 
+
+<a name="3"></a>
 
 ## Ansible의 목표 ##
 - Simple, agentless IT automation that anyone can use
@@ -50,6 +55,8 @@
 > 노드 관리를 위해 Agent가 설치되어 있어야 한다면, Agent설치관련 이슈나 관리해야되는 부분이 증가한다.
 > YAML 형태로 Playbook이 배포되기 때문에 가독성이 뛰어나다.
 
+<a name="4"></a>
+
 ## Ansible의 특징 ##
 1. Agent가 없어도 SSH를 통해서 Ansible을 활용할수 있다.
    1. 구성관리가 필요한 대상 서버가 실제 운영 중이라도 SSH를 통해서 정보를 취득 및 구성 변경을 할 수 있다.
@@ -61,7 +68,7 @@
 
 ---
 
-<a name="2"></a>
+<a name="5"></a>
 
 ## Ansible 기본 개념 ##
 - Ansible은 3개의 구성 요소가 있으며, 이 요소들을 조합해서 어디서<sup>1</sup> 무엇을<sup>2</sup> 어떻게<sup>3</sup> 수행할지 정의한다.
@@ -89,14 +96,3 @@
 > Ansible에서 필요한 모듈이 제공안되는 경우 모듈을 제작 할수 있으며, 모듈제작에 대한 내용은 [Ansible 공식 Documentation](https://docs.ansible.com/ansible/latest/dev_guide/index.html)을 참고하세요.
 ---
 
-<a name="3"></a>
-
-## AWX 란 ##
-- Ansible AWX를 편하게 AWX라고 말하며, Redhat의 Ansible Tower의 오픈소스 버전이다.
-- GitHub에서 소스가 공유되고 있으며, 설치 메뉴얼 GitHub에서 제공 중이다.
-
----
-
-<a name="4"></a>
-
----

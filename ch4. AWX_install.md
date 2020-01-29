@@ -1,5 +1,7 @@
 # 목차 #
 - [사전 설치 패키지](#1)
+  - [설치](#1-1)
+  - [각 패키지 버전](#1)
 - [AWX 설치](#2)
 - [AWX 설치 중 발생 오류 들](#3)
 
@@ -15,6 +17,8 @@
 
 ## 사전 설치 패키지 ##
 
+<a name="1-1"></a>
+
 ### 설치 ###
 1. `yum install epel-release`
 2. `yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
@@ -29,6 +33,8 @@
 11. `pip install cffi==1.13.2`
 12. `pip install docker>=4.1.0`
 13. `pip install docker-compose>=1.25.3`
+
+<a name="1-2"></a>
 
 ### 각 패키지 버전 ###
 - git : Requires Version 1.8.4+
