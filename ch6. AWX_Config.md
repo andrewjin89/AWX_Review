@@ -86,23 +86,71 @@
 
 ### Git 연동 예시 ###
 ![](images/2020-02-03-09-50-23.png)
+> GITHUB / GITLAB 등 Source Control에 대한 접근 설정
+- TYPE DETAILS
+  - USERNAME : git login ID
+  - PASSWORD : git login Password
+  - SCM PRIVATE KEY : git login을 위한 private 키값 / Drag and Drop으로 입력한다.
+  - PRIVATE KEY PASSPHRASE : private 키에 대한 비밀번호
 ---
 <a name="2-2"></a>
 
 ### Machine ###
 ![](images/2020-02-03-09-54-28.png)
+> 서버 접근을 위한 설정
+- TYPE DETAILS
+  - USERNAME : git login ID
+  - PASSWORD : git login Password
+  - SSH PRIVATE KEY : ssh 개인키
+  - SIGNED SSH CERTIFICATE : 서명된 ssh키 인증서
+  - PRIVATE KEY PASSPHRASE :  ssh 개인키 비밀번호
+  - PRIVILEGE ESCALATION METHOD : 권한 상승용 명령어
+  - PRIVILEGE ESCALATION USERNAME : 권한 상승용 ID
+  - PRIVILEGE ESCALATION PASSWORD : 권한 상승용 Password
 ---
 <a name="3"></a>
 
 ## Project 등록 ##
+![](images/2020-02-04-14-02-34.png)
+> playbook을 관리하는 playbook 그룹
+- DETAILS
+  - NAME**(필수)** : 프로젝트 이름
+  - DESCRIPTION : 프로젝트 설명
+  - ORGANIZATION**(필수)** : 이 프로젝트를 사용할 조직
+  - SCM TYPE**(필수)** : playbook을 관리할 방법
+    - SCM URL
+    - SCM BRANCH/TAG/COMMIT
+    - SCM REFSPEC
+    - SCM CREDENTIAL
+    - SCM UPDATE OPTIONS
+      - CLEAN
+      - DELETE ON UPDATE
+      - UPDATE REVISION ON LAUNCH
+      - ALLOW BRANCH OVERRIDE
+    - CACHE TIMEOUT
 ---
 <a name="4"></a>
 
 ## Inventory 등록 ##
+![](images/2020-02-04-14-13-23.png)
+> playbook을 실행 할 서버 인벤토리
+- DETAILS
+  - NAME**(필수)** : 서버 인벤토리 이름
+  - DESCRIPTION : 서버 인벤토리 설명
+  - ORGANIZATION**(필수)** : 서버  인벤토리를 사용할 수 있는 조직
+  - INSIGHTS CREDENTIAL
+  - INSTANCE GROUPS
+  - VARUAVLES : 이 그룹에서 playbook 실행 시 사용할 playbook변수 리스트
+- PERMISSIONS : 이 서버 인벤토리를 사용할 수 있는 사용자 및 사용자 그룹
+- GROUPS : 이 서버 인벤토리에 포함될 서버 그룹
+- HOSTS : 이 서버 인벤토리에 포함될 서버
+- SOURCES
+- COMPLETED JOBS : 이 인벤토리에서 실행 된 job(playbook) 리스트
 ---
 <a name="4-1"></a>
 
 ### Host 등록 ###
+![](images/2020-02-04-14-23-32.png)
 ---
 <a name="4-2"></a>
 
@@ -119,14 +167,23 @@
 <a name="5-1"></a>
 
 ### Job Template 등록 ###
+![](images/2020-02-04-14-26-04.png)
 ---
 <a name="5-2"></a>
 
 ### Workflow Template 등록 ###
+![](images/2020-02-04-14-27-33.png)
+![](images/2020-02-04-14-30-04.png)
+- 첫번째 JOB(hello_world) 실행 후 아래 세가지 중 두가지 실행(초록/파랑 또는 빨간/파랑) 후 세번째 JOB(Print_Facts) 실행
+  * 성공 시(초록색라인) 두번째 JOB(Print_Facts) 실행
+  * 실패 시(빨간색라인) 두번째 JOB(hello_world) 실행
+  * 실행 후(파란색라인) 두번째 JOB(Check_OS) 실행
 ---
 <a name="6"></a>
 
 ## Organizations 등록 ##
+![](images/2020-02-04-14-35-31.png)
+> 사용자 조직으로 각 그룹에 유저 그룹(teams)따로 설정 할수 있다.
 ---
 <a name="6"></a>
 
@@ -139,6 +196,7 @@
 <a name="9"></a>
 
 ## Notifications 등록 ##
+![](images/2020-02-04-14-36-46.png)
 ---
 <a name="10"></a>
 
