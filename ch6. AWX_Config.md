@@ -1,4 +1,4 @@
-# 목차 #
+## 목차
 - [AWX 메뉴 구성](#1)
   - [AWX 화면 구성(View)](#1-1)
 - [Credentials 등록](#2)
@@ -21,7 +21,7 @@
 
 <a name="1"></a>
 
-## AWX 메뉴 구성 ##
+## AWX 메뉴 구성
 |메뉴|내용|
 |:-:|:-:|
 |DASHBOARD|Job의 최근 실행 상태를 한눈에 볼 수 있는 화면|
@@ -47,7 +47,7 @@
 <a name="1-1"></a>
 
 
-## AWX 화면 구성(View) ##
+## AWX 화면 구성(View)
 - DASHBOARD 화면 예시![](images/2020-01-31-16-57-42.png)
   - 등록된 호스트 갯수
   - 등록된 인벤토리 갯수
@@ -72,7 +72,7 @@
 
 <a name="2"></a>
 
-## Credentials 등록 ##
+## Credentials 등록
 ![](images/2020-02-03-09-44-31.png)
 - DETAILS
   - NAME**(필수)** : 등록할 인증정보에 대한 이름
@@ -84,7 +84,7 @@
 ---
 <a name="2-1"></a>
 
-### Git 연동 예시 ###
+### Git 연동 예시 
 ![](images/2020-02-03-09-50-23.png)
 > GITHUB / GITLAB 등 Source Control에 대한 접근 설정
 - TYPE DETAILS
@@ -95,7 +95,7 @@
 ---
 <a name="2-2"></a>
 
-### Machine ###
+### Machine 
 ![](images/2020-02-03-09-54-28.png)
 > 서버 접근을 위한 설정
 - TYPE DETAILS
@@ -110,7 +110,7 @@
 ---
 <a name="3"></a>
 
-## Project 등록 ##
+## Project 등록
 ![](images/2020-02-04-14-02-34.png)
 > playbook을 관리하는 playbook 그룹
 - DETAILS
@@ -131,7 +131,7 @@
 ---
 <a name="4"></a>
 
-## Inventory 등록 ##
+## Inventory 등록
 ![](images/2020-02-04-14-13-23.png)
 > playbook을 실행 할 서버 인벤토리
 - DETAILS
@@ -149,29 +149,29 @@
 ---
 <a name="4-1"></a>
 
-### Host 등록 ###
+### Host 등록 
 ![](images/2020-02-04-14-23-32.png)
 ---
 <a name="4-2"></a>
 
-### Smart Inventory 등록 ###
+### Smart Inventory 등록 
 ---
 <a name="4-3"></a>
 
-### Inventory Script 등록 ###
+### Inventory Script 등록 
 ---
 <a name="5"></a>
 
-## Job Template 등록 ##
+## Job Template 등록
 ---
 <a name="5-1"></a>
 
-### Job Template 등록 ###
+### Job Template 등록 
 ![](images/2020-02-04-14-26-04.png)
 ---
 <a name="5-2"></a>
 
-### Workflow Template 등록 ###
+### Workflow Template 등록 
 ![](images/2020-02-04-14-27-33.png)
 ![](images/2020-02-04-14-30-04.png)
 - 첫번째 JOB(hello_world) 실행 후 아래 세가지 중 두가지 실행(초록/파랑 또는 빨간/파랑) 후 세번째 JOB(Print_Facts) 실행
@@ -181,23 +181,23 @@
 ---
 <a name="6"></a>
 
-## Organizations 등록 ##
+## Organizations 등록
 ![](images/2020-02-04-14-35-31.png)
 > 사용자 조직으로 각 그룹에 유저 그룹(teams)따로 설정 할수 있다.
 ---
 <a name="6"></a>
 
-## User 등록 ##
+## User 등록
 ---
 <a name="8"></a>
 
-## Teams 등록 ##
+## Teams 등록
 ---
 <a name="9"></a>
 
-## Notifications 등록 ##
+## Notifications 등록
 ![](images/2020-02-04-14-36-46.png)
 ---
 <a name="10"></a>
 
-## Instance Groups 등록 ##
+## Instance Groups 등록

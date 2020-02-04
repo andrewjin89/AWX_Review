@@ -1,4 +1,4 @@
-# 목차
+## 목차
 - [Ansible 이란](#1)
 - [Ansible을 사용해야되는 이유](#2)
 - [Ansible의 목표](#3)
@@ -9,14 +9,14 @@
 
 <a name="1"></a>
 
-## Ansible 이란 ##
+## Ansible 이란 
 - Infrastructure as a Code(IaC)를 이용한 **배포 자동화 도구**이면서 **서버 자동화 도구**라고 할수 있다.
 - 현재 가장 많이 사용되는 배포/서버 자동화 도구 이다.
 - Ansible의 경우 Agent없이 SSH를 이용해서 클라이언트에 접속 및 운영을 할 수 있다.
 
 <a name="2"></a>
 
-## Ansible을 사용해야되는 이유 ##
+## Ansible을 사용해야되는 이유 
 1. IT관리자가 관리해야 하는 역활의 증가
 2. IT관리자가 하나의 서버에 배포환경 구축하고 SW설치하고 운영 및 업데이트까지 공통적인 일들을 반복적으로 수행하기에 시간적으로 비효율적다.
 3. 서버 가상화 기술을의 발전으로 다양한 환경(클라우드-퍼블릭/프라이빗/하이브리드)이 도입되면서 IT관리자가 bash or powershell을 통해서 관리하는 것이 힘들어 졌다.
@@ -28,7 +28,7 @@
 
 <a name="3"></a>
 
-## Ansible의 목표 ##
+## Ansible의 목표 
 - Simple, agentless IT automation that anyone can use
   - 간단하며, Agent가 없이 IT 자동화를 누구나 사용 가능하다.
 - 아래 3가지 이유/개념으로 인하여 인프라환경을 호율적으로 관리하며, 코드로 관리 할수 있는 도구가 필요하게 되어 Ansible이 유명해지고, 빠른 보급이 가능해졌다.
@@ -57,7 +57,7 @@
 
 <a name="4"></a>
 
-## Ansible의 특징 ##
+## Ansible의 특징 
 1. Agent가 없어도 SSH를 통해서 Ansible을 활용할수 있다.
    1. 구성관리가 필요한 대상 서버가 실제 운영 중이라도 SSH를 통해서 정보를 취득 및 구성 변경을 할 수 있다.
    2. Windows들 중에서 WinRM이 지원되는 경우에 사용이 가능하다.
@@ -70,7 +70,7 @@
 
 <a name="5"></a>
 
-## Ansible 기본 개념 ##
+## Ansible 기본 개념 
 - Ansible은 3개의 구성 요소가 있으며, 이 요소들을 조합해서 어디서<sup>1</sup> 무엇을<sup>2</sup> 어떻게<sup>3</sup> 수행할지 정의한다.
   - 인벤토리<sup>1</sup>
     - Ansible에 의해 제어되며 Infrastructure as a Code의 대상이 될 서버의 목록을 정의하는 파일

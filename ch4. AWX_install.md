@@ -1,4 +1,4 @@
-# 목차 #
+## 목차
 - [사전 설치 패키지](#1)
   - [설치](#1-1)
   - [각 패키지 버전](#1)
@@ -15,11 +15,11 @@
 
 <a name="1"></a>
 
-## 사전 설치 패키지 ##
+## 사전 설치 패키지
 
 <a name="1-1"></a>
 
-### 설치 ###
+### 설치
 1. `yum install epel-release`
 2. `yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo`
 3. `yum install docker-ce docker-ce-cli containerd.io`
@@ -36,7 +36,7 @@
 
 <a name="1-2"></a>
 
-### 각 패키지 버전 ###
+### 각 패키지 버전
 - git : Requires Version 1.8.4+
 - ansible : Requires Version 2.8+
 - docker : A recent version
@@ -47,7 +47,7 @@
 
 <a name="2"></a>
 
-## AWX 설치 ##
+## AWX 설치
 1. `git clone https://github.com/ansible/awx.git`
 2. `cd awx/installer/`
    1. inventory 설정 중 버전 설정이 필요한 경우
@@ -70,11 +70,12 @@
 > 기본 패스워드는 admin/password 이다.
 
 > 상세한 설치 방법 및 관련 정보는 [AWX GIT](https://github.com/ansible/awx/blob/accf000bdf5acdec46080e71f6d5650e62188764/INSTALL.md#installing-awx)을 참고 하면 된다.
+
 ---
 
 <a name="3"></a>
 
-## AWX 설치 중 발생하는 오류 ##
+## AWX 설치 중 발생하는 오류
 
 1. Ansible Version이 2.8 이하 인 경우 아래 이미지와 같은 에러가 발생한다.![](images/2020-01-28-15-29-12.png)
    - 해결방법 Ansible의 버전을 2.8 이상으로 업그레이드 한다.

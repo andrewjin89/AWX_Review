@@ -1,4 +1,4 @@
-# 목차 #
+## 목차
 - [AWX/Ansible 구성 이슈](#1)
 - [AWX 한글화](#2)
 - [AWX 메뉴 구성](#3)
@@ -7,7 +7,7 @@
 
 <a name="1"></a>
 
-## AWX/Ansible 구성 이슈 ##
+## AWX/Ansible 구성 이슈
 1. Ansible 2.4 이상 버전에서 python의 버전 차이로 인해 Ansible 2.3버전의 playbook에서 SyntaxError가 발생할수 있다.
    1. python버전을 2.6 이상으로 업데이트 하면 해결 가능하다.
       - `yum install python26 --enableerepo=epel`
@@ -25,14 +25,14 @@
 
 <a name="2"></a>
 
-## AWX 한글화 ##
+## AWX 한글화
 1. github awx에서 영어로 된 원본 소스를 한글로 번역해서 빌드 해야된다.
    - 시도중.....
 ---
 
 <a name="3"></a>
 
-## AWX 메뉴 구성 ##
+## AWX 메뉴 구성
 |메뉴|내용|
 |:-:|:-:|
 |DASHBOARD|Job의 최근 실행 상태를 한눈에 볼 수 있는 화면|
