@@ -69,6 +69,4 @@
 |     SETTINGS      |        AWX의 인증과 기본 Job, ansible 설정을 관리         |
 > 자세한 내용은 [Ansible Tower 가이드 문서](http://docs.ansible.com/ansible-tower/)를 참고하면 된다.
 
-
-
 ---

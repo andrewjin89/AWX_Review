@@ -81,6 +81,7 @@
   - ORGANIZATION : 인증정보를 사용할 조직
 - PERMISSIONS => 새로 만들 경우 저장 후 활성화 됨.
   - 인증정보를 사용할 계정이나 그룹을 지정한다.
+
 ---
 <a name="2-1"></a>
 
@@ -107,6 +108,18 @@
   - PRIVILEGE ESCALATION METHOD : 권한 상승용 명령어
   - PRIVILEGE ESCALATION USERNAME : 권한 상승용 ID
   - PRIVILEGE ESCALATION PASSWORD : 권한 상승용 Password
+- 실제 작성하는 값 예시
+
+|항목|설정값|
+|:--:|:--:|
+|name|Ansible Control Node Credential|
+|description|playbook 을 실행하기 위해서 control node 에 접속하기 위한 credential|
+|organization|Default|
+|type|machine|
+|username|ssh 계정명|
+|password|ssh 패스워드|
+|PRIVILEGE ESCALATION|sudo|
+
 ---
 <a name="3"></a>
 
@@ -128,12 +141,28 @@
       - UPDATE REVISION ON LAUNCH
       - ALLOW BRANCH OVERRIDE
     - CACHE TIMEOUT
+- 실제 작성하는 값 예시
+
+|항목|설정값|
+|:--:|:--:|
+|name|Project Name|
+|description|프로젝트 설명|
+|organization	Default|
+|SCM type|git|
+|SCM Url|ansible playbook github repo 주소|
+|SCM Branch|master|
+|SCM Update Options|Clean, Update on Launch 체크|
 ---
 <a name="4"></a>
 
 ## Inventory 등록
 ![](images/2020-02-04-14-13-23.png)
-> playbook을 실행 할 서버 인벤토리
+> ansible CLI에서는 hosts파일을 지정하거나 직접 작성한 Inventory파일을 지정하면 되지만, AWX에서는 target node를 db(postgresql)로 관리한다.
+> 따라서 아래 방법을 이용해서 관리해야한다.
+> 1. SCM에서 hosts파일을 읽어오거나 (매번 playbook 이 실행되기 전에 hosts 내역을 업데이트 한다)
+> 2. dynamic inventory(클라우드와 같이 target node 들이 유연하게 생성/삭제되어 변경되는 경우)
+> 3. 수동으로 직접 관리한다.(수동으로 각각의 서버를 등록/삭제/수정)
+
 - DETAILS
   - NAME**(필수)** : 서버 인벤토리 이름
   - DESCRIPTION : 서버 인벤토리 설명
@@ -155,6 +184,7 @@
 <a name="4-2"></a>
 
 ### Smart Inventory 등록 
+![](images/2020-02-06-11-38-20.png)
 ---
 <a name="4-3"></a>
 

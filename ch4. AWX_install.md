@@ -64,7 +64,8 @@
 4. 설치 성공 하면 아래와 같은 결과가 나타난다.
    - ![](images/2020-01-28-16-24-27.png)
    - ![](images/2020-01-28-16-24-48.png)
-5. 외부 open된 포트인 80포트로 접속해서 웹UI를 확인 한다.![](images/2020-01-29-09-41-12.png)
+5. 외부 open된 포트인 80포트로 접속해서 웹UI를 확인 한다.
+   - ![](images/2020-01-29-09-41-12.png)
 > 접속 시 업데이트를 위한 화면이 보이는 경우 잠시 기다리면 된다.
 
 > 기본 패스워드는 admin/password 이다.
@@ -77,29 +78,36 @@
 
 ## AWX 설치 중 발생하는 오류
 
-1. Ansible Version이 2.8 이하 인 경우 아래 이미지와 같은 에러가 발생한다.![](images/2020-01-28-15-29-12.png)
+1. Ansible Version이 2.8 이하 인 경우 아래 이미지와 같은 에러가 발생한다.
+   - ![](images/2020-01-28-15-29-12.png)
    - 해결방법 Ansible의 버전을 2.8 이상으로 업그레이드 한다.
      - 2020년 1월 28일 기준 ansible 2.9.2버전을 yum으로 설치할수 있다.
-2. docker가 미구동 또는 미설치 중인 상태로 설치 및 구동 하면 된다.![](images/2020-01-28-15-33-47.png)
+2. docker가 미구동 또는 미설치 중인 상태로 설치 및 구동 하면 된다.
+   - ![](images/2020-01-28-15-33-47.png)
    - 설치 방법
      - `yum install docker docker-compose`
    - 구동 방법
      - `systemctl start docker`
      - `systemctl enable docker`
-3. python의 docker-compose 모듈이 없어서 발생한 에러![](images/2020-01-28-15-38-59.png)
+3. python의 docker-compose 모듈이 없어서 발생한 에러
+   - ![](images/2020-01-28-15-38-59.png)
    - 모듈 설치 법
      - `pip install docker-compose`
-     - 모듈 설치중 에러 발생 시![](images/2020-01-28-15-42-12.png)
+     - 모듈 설치중 에러 발생 시
+       - ![](images/2020-01-28-15-42-12.png)
        - `pip install --upgrade pip`
-       - 모듈 설치중 에러 발생 시!![](images/2020-01-28-16-02-53.png)
+       - 모듈 설치중 에러 발생 시
+         - ![](images/2020-01-28-16-02-53.png)
          - `pip install six==1.14.0`
          - `pip install cffi==1.13.2`
-     - 모듈 설치중 에러 발생 시![](images/2020-01-28-16-06-29.png)
+     - 모듈 설치중 에러 발생 시
+       - ![](images/2020-01-28-16-06-29.png)
        - `yum install python-devel`
-4. python의 docker 모듈 충돌시 ![](images/2020-01-28-16-09-40.png)![](images/2020-01-28-16-17-02.png)
-   1. `yum remove python-docker-py-1.10.6-9.el7_6.noarch`
-   2. `pip uninstall docker`
-   3. `pip uninstall docker-py`
+4. python의 docker 모듈 충돌시 ![](images/2020-01-28-16-09-40.png)
+   - ![](images/2020-01-28-16-17-02.png)
+   2. `yum remove python-docker-py-1.10.6-9.el7_6.noarch`
+   3. `pip uninstall docker`
+   4. `pip uninstall docker-py`
    - 위 3가지 패키지 삭제 후 재설치 한다. 단, python 버전에 따라 pip 모듈을 선택해야한다.
    1. `yum install python-docker-py`
    2. python이 2.7 이상 일때
